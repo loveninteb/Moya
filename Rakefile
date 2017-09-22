@@ -167,7 +167,6 @@ task :release, :version do |task, args|
   puts "Updating Example Targets."
   ENV['COCOAPODS_DISABLE_DETERMINISTIC_UUIDS'] = 'true'
   sh "bundle exec pod update Moya --verbose"
-  end
 
   puts "Updating changelog."
   changelog_filename = "CHANGELOG.md"
