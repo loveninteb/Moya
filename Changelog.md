@@ -2,6 +2,7 @@
 ### Changed
 - **Breaking Change** `Endpoint.init` so it doesn't have any default arguments (removing default argument `.get` for `method` parameter and `nil` for  `httpHeaderFields` parameter). [#1289](https://github.com/Moya/Moya/pull/1289) by [@sunshinejr](https://github.com/sunshinejr).
 - **Breaking Change** `NetworkActivityPlugin` so its `networkActivityClosure` has now `target: TargetType` argument in addition to `change: NetworkActivityChangeType`. [#1290](https://github.com/Moya/Moya/pull/1290) by [@sunshinejr](https://github.com/sunshinejr).
+- `MoyaProvider+Rx` fix self-retaining bug in rxRequestWithProgress [#1311](https://github.com/Moya/Moya/pull/1311) by [@AndrewSB](https://github.com/AndrewSB).
 
 # 9.0.0
 - Removed default value for task from `Endpoint` initializer

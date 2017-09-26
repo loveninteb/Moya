@@ -50,8 +50,8 @@ internal extension MoyaProviderType {
             }
         }
 
-        let response: Observable<ProgressResponse> = Observable.create { observer in
-            let cancellableToken = self.request(token, callbackQueue: callbackQueue, progress: progressBlock(observer)) { result in
+        let response: Observable<ProgressResponse> = Observable.create { [weak self] observer in
+            let cancellableToken = self?.request(token, callbackQueue: callbackQueue, progress: progressBlock(observer)) { result in
                 switch result {
                 case .success:
                     observer.onCompleted()
